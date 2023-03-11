@@ -1,5 +1,7 @@
 import React from 'react'
-
+import Link from "next/link"
+import Image from "next/image"
+import confused from "./images/confused.jpg"  
 function Contact() {
   return (
     <>
@@ -15,6 +17,44 @@ function Contact() {
           </form>
         </div>
       </div>
+
+
+        
+    <div className="sm:px-4 py-16  sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded-3xl shadow-sm lg:flex-row sm:mx-auto">
+        <div className="relative lg:w-1/2">
+        <Image src ={confused} width ={500} height = {400}  alt ="hero-image"/>
+          <svg
+            className="absolute top-0 right-0 hidden h-full text-white lg:inline-block"
+            viewBox="0 0 20 104"
+            fill="currentColor"
+          >
+            <polygon points="17.3036738 5.68434189e-14 20 5.68434189e-14 20 104 0.824555778 104" />
+          </svg>
+        </div>
+
+
+
+
+        <div className="flex flex-col justify-center p-8 bg-black lg:p-16 lg:pl-10 lg:w-1/2">
+
+          <h5 className="mb-3 text-3xl text-white font-extrabold leading-none sm:text-4xl">
+            Oh ! You stucked , Dont worry 
+          </h5>
+          <p className="mb-8 text-blue-400 font-black">
+          </p>
+          <div style={{color:'red'}} className="flex items-left">
+          <Link href="https://github.com/Vikash-8090-Yadav/SaL--dApp#readme"> 
+           <a
+           className="flex hover:border-2 hover:shadow-xl items-center  border border-2 justify-center w-full sm:px-10 py-4 leading-6 bg-white rounded-lg font-black"
+           >
+            Take Help !
+           </a>
+           </Link>
+          </div>
+        </div>
+      </div>
+    </div>
     </>
   )
 }
